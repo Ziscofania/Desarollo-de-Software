@@ -1,11 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desarrollo de software</title>
+    <title>DevSolutions - Desarrollo de Software a Medida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Dev<span>Solutions</span></div>
+                <ul class="nav-links">
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#tutoring">Clases</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Desarrollo de Software a Tu Medida</h1>
+            <p>Creemos aplicaciones web y móviles personalizadas, desde prototipos funcionales hasta sistemas completos con las últimas tecnologías.</p>
+            <a href="#services" class="btn">Ver Servicios</a>
+            <a href="#contact" class="btn btn-secondary">Contactar</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Elige el enfoque que mejor se adapte a tus necesidades de desarrollo</p>
+            </div>
+            
+            <div class="service-options">
+                <button class="option-btn active" data-target="coding">Desarrollo con Código</button>
+                <button class="option-btn" data-target="prototyping">Prototipado</button>
+                <button class="option-btn" data-target="fullstack">Solución Fullstack</button>
+            </div>
+            
+            <div id="coding" class="service-details active">
+                <h3>Desarrollo con Código Personalizado</h3>
+                <p>Implementamos soluciones tecnológicas robustas usando las mejores herramientas del mercado:</p>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <i class="fab fa-html5"></i>
+                        <h4>Frontend</h4>
+                        <p>HTML5, CSS3, JavaScript, React, Angular, Vue.js</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-server"></i>
+                        <h4>Backend</h4>
+                        <p>Node.js, Express, Django, Laravel, Spring Boot</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-database"></i>
+                        <h4>Bases de Datos</h4>
+                        <p>MySQL, PostgreSQL, MongoDB, Firebase</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Mobile</h4>
+                        <p>React Native, Flutter, Swift, Kotlin</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="prototyping" class="service-details">
+                <h3>Prototipado Funcional</h3>
+                <p>Diseñamos interfaces de usuario interactivas antes de desarrollar, para validar ideas y ahorrar costos:</p>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <i class="fab fa-figma"></i>
+                        <h4>Figma</h4>
+                        <p>Prototipos de alta fidelidad con interacciones realistas</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-layer-group"></i>
+                        <h4>Componentes Reusables</h4>
+                        <p>Bibliotecas de diseño consistentes y escalables</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-bezier-curve"></i>
+                        <h4>Patrones de Diseño</h4>
+                        <p>UX/UI basado en mejores prácticas de usabilidad</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-user-friends"></i>
+                        <h4>Testeo con Usuarios</h4>
+                        <p>Validación de flujos antes del desarrollo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="fullstack" class="service-details">
+                <h3>Solución Fullstack Integral</h3>
+                <p>Ofrecemos un servicio completo desde la conceptualización hasta el despliegue:</p>
+                
+                <div class="fullstack-process">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Prototipado</h4>
+                            <p>Diseño de interfaces funcionales que validan el concepto con los usuarios.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Documentación</h4>
+                            <p>Especificaciones técnicas detalladas y plan de desarrollo.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Desarrollo</h4>
+                            <p>Implementación frontend y backend con metodologías ágiles.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Pruebas</h4>
+                            <p>Testing automatizado y manual para garantizar calidad.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Despliegue</h4>
+                            <p>Configuración de servidores, CI/CD y monitoreo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutoring" class="tutoring">
+        <div class="container">
+            <div class="section-title">
+                <h2>Clases Personalizadas</h2>
+                <p>¿Eres estudiante y necesitas ayuda con tus proyectos de programación?</p>
+            </div>
+            
+            <div class="tutoring-content">
+                <div class="tutoring-text">
+                    <h3>Aprendizaje Adaptado a Tus Necesidades</h3>
+                    <p>Ofrezco sesiones personalizadas donde analizamos juntos los problemas que enfrentas en tus proyectos académicos o personales. Trabajamos en:</p>
+                    <ul style="margin: 1rem 0 1rem 2rem;">
+                        <li>Análisis de problemas de programación</li>
+                        <li>Búsqueda de soluciones eficientes</li>
+                        <li>Revisión de código y buenas prácticas</li>
+                        <li>Conceptos fundamentales de algoritmos y estructuras de datos</li>
+                        <li>Desarrollo frontend y backend</li>
+                        <li>Preparación para exámenes técnicos</li>
+                    </ul>
+                    <p>El enfoque es práctico y orientado a que comprendas profundamente los conceptos para que puedas aplicarlos en futuros proyectos.</p>
+                    <a href="#contact" class="btn" style="margin-top: 1rem;">Solicitar Clase</a>
+                </div>
+                <div class="tutoring-image">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Clases de programación">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact" style="padding: 5rem 0; background-color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>¿Tienes un proyecto en mente o necesitas más información? ¡Hablemos!</p>
+            </div>
+            
+            <form style="max-width: 600px; margin: 0 auto;">
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nombre</label>
+                    <input type="text" id="name" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email</label>
+                    <input type="email" id="email" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="service" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Servicio de interés</label>
+                    <select id="service" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="coding">Desarrollo con Código</option>
+                        <option value="prototyping">Prototipado</option>
+                        <option value="fullstack">Solución Fullstack</option>
+                        <option value="tutoring">Clases Personalizadas</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Mensaje</label>
+                    <textarea id="message" rows="5" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="margin-bottom: 1.5rem;">Dev<span>Solutions</span></div>
+            <ul class="footer-links">
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#tutoring">Clases</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#">Términos</a></li>
+                <li><a href="#">Privacidad</a></li>
+            </ul>
+            <p class="copyright">© 2023 DevSolutions. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./src/scripts/main.js"></script>
 </body>
 </html>
