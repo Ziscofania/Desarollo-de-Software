@@ -161,59 +161,126 @@
         }
         
         .service-details {
-            display: none;
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-details.active {
-            display: block;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .service-details h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
-        
+        transition: all 0.5s ease-out;
+    }
+    
+    .service-description {
+        color: #666;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 1rem;
+    }
+    
+    .tech-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tech-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-icon {
+        background: linear-gradient(135deg, #3498db, #2c3e50);
+        color: white;
+        padding: 1.5rem 0;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tech-card h4 {
+        margin: 0 0 1rem 0;
+        color: #2c3e50;
+        font-size: 1.3rem;
+    }
+    
+    .tech-list {
+        color: #666;
+        font-size: 0.95rem;
+        margin: 0 0 1rem 0;
+        flex: 1;
+    }
+    
+    .card-hover-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(44, 62, 80, 0.95);
+        color: white;
+        padding: 1.5rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-out;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .tech-card:hover .card-hover-content {
+        transform: translateY(0);
+    }
+    
+    .card-hover-content p {
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .learn-more {
+        color: #3498db;
+        font-weight: bold;
+        font-size: 0.9rem;
+        display: inline-block;
+        transition: transform 0.2s;
+    }
+    
+    .tech-card:hover .learn-more {
+        transform: translateX(5px);
+    }
+    
+    @media (max-width: 768px) {
         .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
         }
         
         .tech-card {
-            background-color: var(--light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            height: auto;
         }
         
-        .tech-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        .card-hover-content {
+            position: relative;
+            transform: none;
+            background: #f8f9fa;
+            color: #333;
+            padding: 1rem;
+            margin-top: 1rem;
         }
-        
-        .tech-card i {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-        
-        .tech-card h4 {
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-        
+    }
         .fullstack-process {
             margin-top: 2rem;
         }
